@@ -13,7 +13,7 @@ const App = () => {
       <Router>
         <Header/>
         <Routes>
-          <Route exact path="/"  element={<Feed></Feed>}/>
+          <Route exact path="/feed"  element={<Feed></Feed>}/>
           <Route exact path="/searchResults/:searchQuery" element={<SearchResult/>}/>
           <Route exact path="/video/:id" element={<VideoDetail/>}/>
         </Routes>
