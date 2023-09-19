@@ -12,16 +12,17 @@ const LeftNav = () => {
   const clickHandel = (name, type) => {
     switch (type) {
       case "category":
-        navigate("/");
+        navigate(`/${name}`);
         return setselectcategories(name);
       case "home":
-       navigate("/");
+       navigate("/home");
         return setselectcategories(name);
       case "menu":
         return false;
       default:
         break;
     }
+
   };
   return (
     <div
