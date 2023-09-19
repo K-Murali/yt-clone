@@ -15,7 +15,7 @@ const LeftNav = () => {
         navigate(`/${name}`);
         return setselectcategories(name);
       case "home":
-       navigate("/home");
+       navigate("/yt-clone");
         return setselectcategories(name);
       case "menu":
         return false;

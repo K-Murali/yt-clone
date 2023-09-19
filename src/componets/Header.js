@@ -55,7 +55,7 @@ const Header = () => {
                   </div>
                   </div>
                <div className="flex text-center items-center justify-center">
-              <Link to="/home">
+              <Link to="/yt-clone">
                 <img className="h-4 w-15 flex text-center" src={logo} alt="Youtube" />
               </Link>
                 </div>   
