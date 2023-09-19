@@ -28,9 +28,9 @@ const LeftNav = () => {
     <div
     className={` w-[210px] overflow-y-auto  h-full ${
       mobilemenu ? "hidden" : "block"
-    }  py-4 bg-black   fixed z-10`}
+    }   bg-black   fixed z-10`}
     >
-      <div className="flex flex-col px-5">
+      <div className="flex flex-col px-3">
         {categories.map((item, i=1 ) => {
           return (
             <>
@@ -41,9 +41,9 @@ const LeftNav = () => {
                 action={() => {
                   clickHandel(item.name, item.type);
                 }}
-                className={`${
+                highlight={`${
                   selectcategories === item.name
-                    ? " bg-white-[0.2] text-white[0.2] "
+                    ? " bg-white-[0.5] text-white[0.2] "
                     : ""
                 }`}
               />

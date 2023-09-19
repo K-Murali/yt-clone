@@ -14,11 +14,12 @@ const VideoDetail = () => {
   const [video, setvideo] = useState();
   const [related, setrelated] = useState();
   const { id } = useParams();
-  const { setloading, loading, loadval, setloadval } = useContext(Context);
+  const { setloading, loading, loadval,mobilemenu, setloadval } = useContext(Context);
 
   useEffect(() => {
     fetchvideodetail();
     fetchRelatedVideo();
+   
   }, [id]);
 
   const fetchvideodetail = () => {
@@ -48,11 +49,13 @@ const VideoDetail = () => {
   return (
     video &&
     !loading && (
-      <div className="flex  flex-row md:flex-row items-center justify-center md:p-12  h-[calc(100%-60px)] bg-black">
+      <div  className="flex  flex-row md:flex-row items-center justify-center md:p-10  h-[calc(100%-60px)] bg-black">
 
         <div className="flex flex-col md:flex-row items-start gap-2   justify-center">
-          <div className="flex mt-5 mx-0 flex-col justify-center items-left">            
-         <LeftNav/>
+          <div className="flex mt-5 mx-0 flex-col justify-center items-left">     
+          {mobilemenu?<div className="  fixed left-0 top-12 py-1">
+          <LeftNav/>
+            </div> :<></>   }   
             <div  className="w-screen md:w-[1000px] h-[200px] md:h-[550px]">
               <ReactPlayer
               playsinline

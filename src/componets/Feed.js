@@ -16,6 +16,7 @@ const Feed = () => {
     return (
 
         <div className="flex flex-row h-[calc(100%-56px)]">
+            
               <LeftNav/>
             <div  className={` md:mt-12 mt-16 grow w-[calc(100%-210px)] ${!mobilemenu?'md:ml-[210px]':'md:ml-0'} h-full  bg-black`}>
             <Topicbar/>

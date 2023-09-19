@@ -12,8 +12,7 @@ const Topicbar = () => {
   
   } = useContext(Context);
   const clickHandel = (item) => {
-    
-    navigate("/");
+    navigate(`/${item.name}`);
     setselectcategories(item.name);
   };
   return (
@@ -27,7 +26,7 @@ const Topicbar = () => {
         {topic.map((item, i = 0) => {
           return (
             <>
-              <div   key={i++} className={`text-xs cursor-pointer  bg-white/[0.2] ${selectcategories===item.name?'bg-white text-black':''}  hover:bg-white hover:text-black rounded h-fit w-fit items-center px-2 py-1 mb-[1px] flex text-white`}>
+              <div   key={i++} className={`text-sm cursor-pointer  bg-white/[0.2] ${selectcategories===item.name?'bg-white text-black':''}  hover:bg-white hover:text-black rounded h-fit w-fit items-center px-2 py-1 mb-[1px] flex text-white`}>
                 <span onClick={()=>{clickHandel(item)}} className="w-fit   whitespace-nowrap">{item.name}</span>
               </div>
             </>

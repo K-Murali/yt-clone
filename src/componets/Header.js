@@ -50,18 +50,12 @@ const Header = () => {
               <div className="flex cursor-pointer   hover:bg-white/[0.25] rounded-full">
 
 
-            <div >
-              {mobilemenu ? (
-                
-                <SlMenu onClick={mobilemenuToggle} className="text-white m-2" />
-                
-                ) : (
-                  <SlMenu onClick={mobilemenuToggle} className="text-white m-2" />
-                  )}
+            <div onClick={mobilemenuToggle} >
+                <SlMenu  className="text-white m-2" />
                   </div>
                   </div>
                <div className="flex text-center items-center justify-center">
-              <Link to="/">
+              <Link to="/home">
                 <img className="h-4 w-15 flex text-center" src={logo} alt="Youtube" />
               </Link>
                 </div>   
