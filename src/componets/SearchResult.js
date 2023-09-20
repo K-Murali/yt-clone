@@ -6,13 +6,13 @@ import LeftNav from './LeftNav';
 import SearchVideocard from './SearchVideocard';
 
 const SearchResult = () => {
-  const [search, setsearch] = useState([]);
-  const { searchQuery } = useParams();
+  const [search, setsearch] = useState([]);//fetched results are set into this array
+  const { searchQuery } = useParams();  // etracting quesry from prams
   const { setloading,loading,mobilemenu ,setloadval} = useContext(Context);
 
   useEffect(() => {
     fetchsearch();
-  }, [searchQuery]);
+  }, [searchQuery]);   // when ever search query changes render new array
 
 
   const fetchsearch = () => {

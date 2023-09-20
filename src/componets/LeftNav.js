@@ -6,32 +6,31 @@ import { Context } from "../data/contextApi";
 
 const LeftNav = () => {
   const navigate = useNavigate();
-  
-  const { selectcategories, setselectcategories, mobilemenu,loading, setmobilemenu } =
-  useContext(Context);
+
+  const { setselectcategories, mobilemenu } = useContext(Context);
+
   const clickHandel = (name, type) => {
     switch (type) {
       case "category":
         navigate(`/${name}`);
         return setselectcategories(name);
       case "home":
-       navigate("/yt-clone");
+        navigate("/yt-clone");
         return setselectcategories(name);
       case "menu":
         return false;
       default:
         break;
     }
-
   };
   return (
     <div
-    className={` w-[210px] overflow-y-auto  h-full ${
-      mobilemenu ? "hidden" : "block"
-    }   bg-black   fixed z-10`}
+      className={` w-[210px] overflow-y-auto  h-full ${
+        mobilemenu ? "hidden" : "block"
+      }   bg-black   fixed z-10`}
     >
       <div className="flex flex-col px-3">
-        {categories.map((item, i=1 ) => {
+        {categories.map((item, i = 1) => {
           return (
             <>
               <LeftNavMenuItem
@@ -41,13 +40,8 @@ const LeftNav = () => {
                 action={() => {
                   clickHandel(item.name, item.type);
                 }}
-                highlight={`${
-                  selectcategories === item.name
-                    ? " bg-white-[0.5] text-white[0.2] "
-                    : ""
-                }`}
               />
-              {item.divider && <hr className="my-5 border-white/[0.2]"/>}
+              {item.divider && <hr className="my-5 border-white/[0.2]" />}
             </>
           );
         })}

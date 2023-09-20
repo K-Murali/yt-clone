@@ -14,7 +14,7 @@ const VideoDetail = () => {
   const [video, setvideo] = useState();
   const [related, setrelated] = useState();
   const { id } = useParams();
-  const { setloading, loading, loadval,mobilemenu, setloadval } = useContext(Context);
+  const { setloading, loading, mobilemenu, setloadval } = useContext(Context);
 
   useEffect(() => {
     fetchvideodetail();

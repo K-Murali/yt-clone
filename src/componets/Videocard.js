@@ -10,9 +10,6 @@ const Videocard = ({ video }) => {
    const navigate=useNavigate();
   const [isMouseEntered, setIsMouseEntered] = useState(false);
 
-   setInterval(() => {
-    
-   }, 1000);
   const handleMouseEnter = () => {
     setIsMouseEntered(true);
   };
@@ -65,7 +62,6 @@ const Videocard = ({ video }) => {
               {video?.author?.badges[0]?.type === "VERIFIED_CHANNEL" && (
                 <BsFillCheckCircleFill className="text-white/[0.5]" />
               )}
-              {/* {`${(window.innerWidth<'500px')?abbreviateNumber(video?.stats?.views,0)+'views <span className="text-white/[0.5] font-bold">.</span> {video?.publishedTimeText}:""':""}`}  */}
             </span>
             <div className="md:flex md:items-start text-white/[0.5] text-xs  ">
               <span>
