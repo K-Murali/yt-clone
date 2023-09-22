@@ -6,11 +6,12 @@ export const Context = createContext();
 
 export const AppDataProvider = (props) => {
   const [loading, setloading] = useState(false);
-  const [selectcategories, setselectcategories] = useState(false);
+  const [selectcategories, setselectcategories] = useState("india");
   const [searchresults, setsearchresults] = useState(false);
   const [mobilemenu, setmobilemenu] = useState(false);
   const [loadval, setloadval] = useState(0);
   const [topic, settopic] = useState(topics);
+  const [page, setpage] = useState(6);
 
   useEffect(() => {
     console.log("render")
@@ -18,7 +19,6 @@ export const AppDataProvider = (props) => {
   }, [selectcategories]);
 
   const fetch_category_data = (query) => {
-  
     setloading(true);
     setloadval(10)
     fetchdata(`search/?q=${query}`).then(({contents}) => {
