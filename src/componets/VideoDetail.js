@@ -19,7 +19,7 @@ const VideoDetail = () => {
   useEffect(() => {
     fetchvideodetail();
     fetchRelatedVideo();
-
+    
   }, [id]);
 
   const fetchvideodetail = () => {
